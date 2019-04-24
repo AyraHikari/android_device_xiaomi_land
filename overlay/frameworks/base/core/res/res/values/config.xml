@@ -364,4 +364,7 @@
      <!-- Enable NightLight -->
     <bool name="config_nightDisplayAvailable">true</bool>
 
+    <!-- Whether the device has outdated qti-telephony-common.jar -->
+    <bool name="config_oldQtiTelephony">false</bool>
+
 </resources>
