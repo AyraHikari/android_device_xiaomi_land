@@ -83,26 +83,38 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.gralloc.disable_wb_ubwc=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=0 \
     debug.sf.latch_unsignaled=1 \
     debug.egl.hw=0 \
+    debug.sf.disable_hwc_vds=1 \
+    debug.sdm.support_writeback=0 \
+    debug.hwui.use_buffer_age=false \
+    debug.composition.type=gpu \
     persist.hwc.mdpcomp.enable=true \
     debug.mdpcomp.logs=0 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     debug.enable.sglscale=1 \
     sdm.debug.disable_skip_validate=1 \
+    sdm.debug.disable_rotator_split=1 \
+    sdm.debug.rotator_downscale=1 \
+    sdm.perf_hint_window=50 \
+    sys.display-size=3840x2160 \
     debug.sf.recomputecrop=0 \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
     vendor.display.disable_skip_validate=1 \
+    vendor.display.perf_hint_window=50 \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=0 \
+    ro.qualcomm.svi=0 \
     ro.vendor.display.cabl=2 \
     ro.sf.lcd_density=280 \
     persist.debug.wfd.enable=1 \
-    persist.hwc.enable_vds=1
+    persist.hwc.enable_vds=1 \
+    persist.sys.wfd.virtual=0
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
