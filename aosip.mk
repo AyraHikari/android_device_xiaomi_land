@@ -31,13 +31,9 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS="Ayra Hikari"
 
-# GApps
-# $(call inherit-product-if-exists, vendor/gapps/config.mk)
-
 # PixelStyle
 $(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
 
-TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 
 PRODUCT_BRAND := Xiaomi
