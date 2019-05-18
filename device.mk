@@ -301,6 +301,10 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libandroid_net_32
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom
