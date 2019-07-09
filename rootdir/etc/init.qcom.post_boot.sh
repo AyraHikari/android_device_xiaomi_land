@@ -181,8 +181,11 @@ function configure_memory_parameters() {
     echo $vmpres_file_min > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
     
     # Enable adaptive LMK for all targets &
-    # use Google default LMK series for all 64-bit targets >=2GB.
-    echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+    # do not use Google default LMK series for all 64-bit targets >=2GB.
+    echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+
+    # Change LMK default value
+    echo '14596,21894,43788,72980,102172,109470' > /sys/module/lowmemorykiller/parameters/minfree
 
     # Enable oom_reaper
     if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
